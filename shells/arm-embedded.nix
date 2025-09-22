@@ -3,11 +3,11 @@
 pkgs.mkShell {
   name = "arm-embedded-dev-shell";
 
-  nativeBuildInputs = [
-    pkgs.gcc-arm-embedded
-    pkgs.cmake
-    pkgs.ninja
-    pkgs.clang-tools
+  nativeBuildInputs = with pkgs; [
+    gcc-arm-embedded
+    cmake
+    ninja
+    clang-tools
   ];
 
   shellHook = ''
